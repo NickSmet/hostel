@@ -1,7 +1,14 @@
 .header__top {
     background-color: #1f232b;
     color: #fff;
+}
+
+.header__top_row > div {
     padding: 10px 0;
+}
+
+div.col__header-book-btn {
+    padding: 0;
 }
 
 /* Contacts */ 
@@ -41,4 +48,22 @@
 .header-top-menu span {
     color: #444;
     font-size: 15px;
+}
+
+/* Header Book Button */
+
+.header-book-btn {
+    display: block;
+    color: #fff;
+    background-color: #108b52;
+    font-size: 14px;
+    padding: 10.5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.header-book-btn:hover {
+    background-color: #ffce14;
+    text-decoration: none;
+    color: #fff;
 }
