@@ -30,3 +30,15 @@
 .header-social a {
     padding: 0 10px;
 }
+
+/* Top Menu */
+
+.header-top-menu a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.header-top-menu span {
+    color: #444;
+    font-size: 15px;
+}
