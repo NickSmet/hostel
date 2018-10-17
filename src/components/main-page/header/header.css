@@ -1,0 +1,22 @@
+.header__top {
+    background-color: #1f232b;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Contacts */ 
+
+.header-top__contacts-item a {
+    color: #fff;
+}
+
+.header-top__contacts-item {
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.header-top__contacts-item i {
+    color: #acacac;
+    margin-right: 5px
+}
+
