@@ -5,7 +5,7 @@ const HeaderContacts = ({ contacts }) => {
         <div>
             <span className='header-top__contacts-item'>
                 <i className='hillter-icon-location'></i>
-                <a href="#">{contacts.address}</a>
+                <a href="#add">{contacts.address}</a>
             </span>
             <span className='header-top__contacts-item'>
                 <i className='hillter-icon-phone'></i>
