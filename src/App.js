@@ -5,6 +5,7 @@ import './fonts/stylesheet.css';
 import './App.css';
 import Header from './components/main-page/header/header';
 import HeaderMainMenu from './components/main-page/header/header-main-menu';
+import MobileHeaderMainMenu from './components/main-page/header/mobile-header-main-menu';
 
 class App extends Component {
   render() {
@@ -12,6 +13,35 @@ class App extends Component {
       <div className="App">
         <Header />
         <HeaderMainMenu />
+        <MobileHeaderMainMenu />
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
         <div>1</div>
         <div>1</div>
         <div>1</div>

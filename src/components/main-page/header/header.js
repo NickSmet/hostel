@@ -23,16 +23,16 @@ class Header extends Component {
                 <div className="header__top">
                     <Row className='header__top_row'>
                         <div className='container header__top_container'>
-                            <Col xs={6} >
+                            <Col xsHidden={true} sm={12} md={6} className='header-contacts-wrapper'>
                                 <HeaderContacts contacts={this.props.ru.contacts} />
                             </Col>
-                            <Col xs={2} >
+                            <Col xs={12} sm={4} md={2} >
                                 <HeaderSocial contacts={this.props.ru.contacts} />
                             </Col>
-                            <Col xs={2} >
+                            <Col xs={12} sm={4} md={2} >
                                 <HeaderTopMenu />
                             </Col>
-                            <Col xs={2} className='col__header-book-btn'>
+                            <Col xs={12} sm={4} md={2} className='col__header-book-btn'>
                                 <HeaderBookBtn />
                             </Col>
                         </div>

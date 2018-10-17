@@ -6,12 +6,19 @@ const initialState = {
     },
     ru: {
         contacts: {}  
+    },
+    ui: {
+        main: {
+            leftMenuIsOpen: false,
+            isHover: false,
+            justClosed: false
+        }
     }
 };
 
 const reducer = (state = initialState, action) => {
     console.log(action);
-
+    let justClosed = false;
     switch (action.type) {
         case types.GET_CONTACTS:
             let ru = {
@@ -39,6 +46,35 @@ const reducer = (state = initialState, action) => {
                 en: en,
                 ru: ru
 
+            }
+        case types.OPEN_LEFT_MENU:
+            if(state.ui.main.leftMenuIsOpen === true) {
+                justClosed = true;
+            }
+
+            return {
+                ...state,
+                ui: {
+                    main: {
+                        ...state.ui.main,
+                        leftMenuIsOpen: !state.ui.main.leftMenuIsOpen,
+                        justClosed: justClosed
+                    }
+                }
+            }
+        case types.HANDLE_HOVER:
+            if(state.ui.main.leftMenuIsOpen === true) {
+                justClosed = false;
+            }
+            return {
+                ...state,
+                ui: {
+                    main: {
+                        ...state.ui.main,
+                        isHover: !state.ui.main.isHover,
+                        justClosed: justClosed
+                    }
+                }
             }
     }
     return state;

@@ -16,6 +16,10 @@ div.col__header-book-btn {
 
 /* Contacts */ 
 
+.header-contacts-wrapper {
+    text-align: center;
+}
+
 .header-top__contacts-item a {
     color: #fff;
 }
@@ -31,6 +35,9 @@ div.col__header-book-btn {
 }
 
 /* Social */
+.header-social {
+    text-align: center;
+}
 
 .header-social i {
     color: #fff;
@@ -42,6 +49,10 @@ div.col__header-book-btn {
 }
 
 /* Top Menu */
+
+.header-top-menu {
+    text-align: center;
+}
 
 .header-top-menu a {
     color: #fff;
@@ -73,6 +84,12 @@ div.col__header-book-btn {
 
 /* Main Menu */
 
+.mobile-main-menu-wrapper {
+    background-color: #344a71;
+    position: sticky;
+    top: 0;
+}
+
 .main-menu-wrapper {
     background-color: #289152e6;
     position: sticky;
@@ -81,6 +98,11 @@ div.col__header-book-btn {
 
 .header-logo img {
     max-height: 55px;
+}
+
+.header-logo_mobile {
+    position: relative;
+    right: -10%;
 }
 
 .header-logo {
@@ -110,4 +132,34 @@ div.col__header-book-btn {
 .main-menu-items > li > a:hover {
     color: #232323;
     background-color: #fff;
+}
+
+
+
+@media only screen and (max-width : 767px) {
+    .container {
+        padding: 0;
+    }
+}
+
+.menu-btn {
+    padding: 30px 20px;
+    float: right;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .header-logo img {
+        max-height: 40px;
+    }
+
+    .burger-menu span {
+        left: -65px;
+        top: 70px; 
+    }
+}
+
+.mobile-menu-container {
+    padding: 0 15px;
 }
