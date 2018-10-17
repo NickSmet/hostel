@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Col, Row } from 'react-bootstrap'; 
+import { Col, Row } from 'react-bootstrap';
 
 import { getContacts } from './../../../store/actions/actions.js';
 import HeaderContacts from './header-contacts';
 import HeaderSocial from './header-social';
 import HeaderTopMenu from './header-top-menu';
 import HeaderBookBtn from './header-book-btn';
+
 
 import './header.css';
 
@@ -20,22 +21,22 @@ class Header extends Component {
         return (
             <header>
                 <div className="header__top">
-                    <div className='container'>
-                        <Row className='header__top_row'>
+                    <Row className='header__top_row'>
+                        <div className='container header__top_container'>
                             <Col xs={6} >
-                               <HeaderContacts contacts={this.props.ru.contacts} />
+                                <HeaderContacts contacts={this.props.ru.contacts} />
                             </Col>
                             <Col xs={2} >
-                               <HeaderSocial contacts={this.props.ru.contacts} />
+                                <HeaderSocial contacts={this.props.ru.contacts} />
                             </Col>
                             <Col xs={2} >
-                               <HeaderTopMenu />
+                                <HeaderTopMenu />
                             </Col>
                             <Col xs={2} className='col__header-book-btn'>
-                               <HeaderBookBtn />
+                                <HeaderBookBtn />
                             </Col>
-                        </Row>
-                    </div>
+                        </div>
+                    </Row>
                 </div>
             </header>
         );

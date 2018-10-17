@@ -1,3 +1,7 @@
 body {
     font-family: 'FuturaFuturisLightC';
 }
+
+.p-r-0 {
+    padding-right: 0;
+}

@@ -4,13 +4,42 @@ import './fonts/font-awesome.min.css';
 import './fonts/stylesheet.css';
 import './App.css';
 import Header from './components/main-page/header/header';
-
+import HeaderMainMenu from './components/main-page/header/header-main-menu';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
+        <Header />
+        <HeaderMainMenu />
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
       </div>
     );
   }
