@@ -20,3 +20,13 @@
     margin-right: 5px
 }
 
+/* Social */
+
+.header-social i {
+    color: #fff;
+    font-size: 16px;
+}
+
+.header-social a {
+    padding: 0 10px;
+}

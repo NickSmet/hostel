@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 
 import { getContacts } from './../../../store/actions/actions.js';
 import HeaderContacts from './header-contacts';
+import HeaderSocial from './header-social';
 
 import './header.css';
 
@@ -21,6 +22,9 @@ class Header extends Component {
                         <Row>
                             <Col xs={6} >
                                <HeaderContacts contacts={this.props.ru.contacts} />
+                            </Col>
+                            <Col xs={5} >
+                               <HeaderSocial contacts={this.props.ru.contacts} />
                             </Col>
                         </Row>
                     </div>
