@@ -1,6 +1,7 @@
 body {
     font-family: 'FuturaFuturisLightC';
     width: 100%;
+    overflow-x: hidden;
 }
 
 .p-r-0 {

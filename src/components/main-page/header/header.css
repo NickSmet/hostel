@@ -163,3 +163,40 @@ div.col__header-book-btn {
 .mobile-menu-container {
     padding: 0 15px;
 }
+
+/* Side Menu */
+
+.side-menu-items {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu-items-wrapper {
+    background-color: rgba(52, 74, 113, 0.85);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.hide-side-menu {
+    right: -300px;
+}
+
+.side-menu-items > li > a {
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    padding: 0 35px;
+    border-bottom: 1px solid #ffffff1a;
+    letter-spacing: 0.02em;
+    
+}
+
+.side-menu-items > li > a:hover {
+    color: #232323;
+    background-color: #fff;
+}
