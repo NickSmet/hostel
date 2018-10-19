@@ -12,6 +12,9 @@ const initialState = {
             leftMenuIsOpen: false,
             isHover: false,
             justClosed: false
+        },
+        mainGallery: {
+            imgs: []
         }
     }
 };
@@ -47,6 +50,17 @@ const reducer = (state = initialState, action) => {
                 ru: ru
 
             }
+        case types.GET_MAIN_GALLERY_IMGS:
+            return {
+                ...state,
+                ui: {
+                    ...state.ui,
+                    mainGallery: {
+                        ...state.ui.mainGallery,
+                        imgs: action.imgs
+                    }
+                }
+            }
         case types.OPEN_LEFT_MENU:
             if(state.ui.main.leftMenuIsOpen === true) {
                 justClosed = true;
@@ -55,6 +69,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 ui: {
+                    ...state.ui,
                     main: {
                         ...state.ui.main,
                         leftMenuIsOpen: !state.ui.main.leftMenuIsOpen,
@@ -69,6 +84,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 ui: {
+                    ...state.ui,
                     main: {
                         ...state.ui.main,
                         isHover: !state.ui.main.isHover,

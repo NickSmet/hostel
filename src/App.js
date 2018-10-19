@@ -6,6 +6,7 @@ import './App.css';
 import Header from './components/main-page/header/header';
 import HeaderMainMenu from './components/main-page/header/header-main-menu';
 import MobileHeaderMainMenu from './components/main-page/header/mobile-header-main-menu';
+import Slider from './components/main-page/slider/slider';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Header />
         <HeaderMainMenu />
         <MobileHeaderMainMenu />
+        <Slider />
         <div>1</div>
         <div>1</div>
         <div>1</div>
