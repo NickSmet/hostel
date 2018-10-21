@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Col } from 'react-bootstrap'
 
 import GalleryMainItem from './gallery-main-item';
 

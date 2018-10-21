@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import * as types from './../../../store/actions/actions';
 import { changeGalleryCat } from './../../../store/actions/actions';
 
 const GalleryCategories = (props) => {

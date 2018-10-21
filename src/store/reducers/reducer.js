@@ -24,7 +24,6 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-    console.log(action);
     let justClosed = false;
     switch (action.type) {
         case types.GET_CONTACTS:
@@ -118,8 +117,12 @@ const reducer = (state = initialState, action) => {
                     }
                 }
             }
+        default:
+            return {
+                ...state
+            }
     }
-    return state;
+    
 }
 
 export default reducer;
