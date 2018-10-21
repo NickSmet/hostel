@@ -1,0 +1,36 @@
+.gallery h1 {
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-cats {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.gallery-cats div {
+    text-transform: uppercase;
+    line-height: 38px;
+    padding: 0 16px;
+    color: #333;
+    border: 1px solid #bbb;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.75;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.gallery-cats div:hover {
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+    opacity: 1;
+}
+
+div.cat-active {
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+    opacity: 1;
+}

@@ -4,6 +4,8 @@ export const GET_CONTACTS = 'GET_CONTACTS';
 export const OPEN_LEFT_MENU = 'OPEN_LEFT_MENU';
 export const HANDLE_HOVER = 'HANDLE_HOVER';
 export const GET_MAIN_GALLERY_IMGS = 'GET_MAIN_GALLERY_IMGS';
+export const GET_SLIDER_IMGS = 'GET_SLIDER_IMGS';
+export const CHANGE_GALLERY_CAT = 'CHANGE_GALLERY_CAT';
 
 export const saveContacts = (contacts) => {
     return {
@@ -20,17 +22,17 @@ export const getContacts = () => {
     };
 }
 
-export const saveMainGalleryImgs = (imgs) => {
+export const saveSlider = (imgs) => {
     return {
-        type: GET_MAIN_GALLERY_IMGS,
+        type: GET_SLIDER_IMGS,
         imgs: imgs
     }
 }
 
-export const getMainGalleryImgs = () => {
+export const getSliderImgs = () => {
     return dispatch => {
-        getData.getMainGalleryImgs().then(res => {
-            dispatch(saveMainGalleryImgs(res.data));
+        getData.getSliderImgs().then(res => {
+            dispatch(saveSlider(res.data));
         })
     };
 }

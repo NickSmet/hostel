@@ -2,7 +2,7 @@ import React from 'react';
 import SlickSlider from "react-slick";
 import { connect } from 'react-redux';
 
-import { getMainGalleryImgs } from '../../../store/actions/actions';
+import { getSliderImgs } from '../../../store/actions/actions';
 import './../../../../node_modules/slick-carousel/slick/slick.css';
 import './../../../../node_modules/slick-carousel/slick/slick-theme.css';
 import './slider.css';
@@ -18,7 +18,7 @@ class Slider extends React.Component {
             return (
                 <img key={item.id} 
                     className='main-gallery-img' 
-                    src={item.path.replace('..', 'http://dev.centeral.ru/')} alt="Фото"
+                    src={item.path.replace('..', 'http://dev.centeral.ru')} alt="Фото"
                 />
             );
         });
@@ -51,13 +51,13 @@ class Slider extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        imgs: state.ui.mainGallery.imgs
+        imgs: state.ui.slider.imgs
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        loadImgs: () => dispatch(getMainGalleryImgs())
+        loadImgs: () => dispatch(getSliderImgs())
     }
 }
 

@@ -14,6 +14,10 @@ const initialState = {
             justClosed: false
         },
         mainGallery: {
+            imgs: [],
+            cat: 'all'
+        },
+        slider: {
             imgs: []
         }
     }
@@ -61,6 +65,17 @@ const reducer = (state = initialState, action) => {
                     }
                 }
             }
+        case types.GET_SLIDER_IMGS:
+            return {
+                ...state,
+                ui: {
+                    ...state.ui,
+                    slider: {
+                        ...state.ui.slider,
+                        imgs: action.imgs
+                    }
+                }
+            }
         case types.OPEN_LEFT_MENU:
             if(state.ui.main.leftMenuIsOpen === true) {
                 justClosed = true;
@@ -89,6 +104,17 @@ const reducer = (state = initialState, action) => {
                         ...state.ui.main,
                         isHover: !state.ui.main.isHover,
                         justClosed: justClosed
+                    }
+                }
+            }
+        case types.CHANGE_GALLERY_CAT:
+            return {
+                ...state,
+                ui: {
+                    ...state.ui,
+                    mainGallery: {
+                        ...state.ui.mainGallery,
+                        cat: action.cat
                     }
                 }
             }
