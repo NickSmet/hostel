@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as types from './../../../store/actions/actions';
+import { changeGalleryCat } from './../../../store/actions/actions';
 
 const GalleryCategories = (props) => {
     return (
@@ -42,10 +43,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeCat: (cat) => dispatch({
-            type: types.CHANGE_GALLERY_CAT,
-            cat: cat
-        })
+        changeCat: (cat) => dispatch(
+            changeGalleryCat(cat)
+        )
     }
 }
 

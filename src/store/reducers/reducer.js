@@ -54,7 +54,7 @@ const reducer = (state = initialState, action) => {
                 ru: ru
 
             }
-        case types.GET_MAIN_GALLERY_IMGS:
+        case types.GET_GALLERY_IMGS:
             return {
                 ...state,
                 ui: {

@@ -6,6 +6,7 @@ export const HANDLE_HOVER = 'HANDLE_HOVER';
 export const GET_MAIN_GALLERY_IMGS = 'GET_MAIN_GALLERY_IMGS';
 export const GET_SLIDER_IMGS = 'GET_SLIDER_IMGS';
 export const CHANGE_GALLERY_CAT = 'CHANGE_GALLERY_CAT';
+export const GET_GALLERY_IMGS = 'GET_GALLERY_IMGS';
 
 export const saveContacts = (contacts) => {
     return {
@@ -35,5 +36,35 @@ export const getSliderImgs = () => {
             dispatch(saveSlider(res.data));
         })
     };
+}
+
+export const saveGalleryImgs = (imgs) => {
+    return {
+        type: GET_GALLERY_IMGS,
+        imgs: imgs
+    }
+}
+
+export const getGalleryImgs = (cat) => {
+    return dispatch => {
+        getData.getGalleryImgs(cat).then(res => {
+            dispatch(saveGalleryImgs(res.data));
+        })
+    };
+}
+
+export const changeGalleryCat = (cat) => {
+    return dispatch => {
+        //getGalleryImgs(cat);
+        getData.getGalleryImgs(cat).then(res => {
+            dispatch(saveGalleryImgs(res.data));
+            dispatch({
+                type: CHANGE_GALLERY_CAT,
+                cat: cat
+            });
+        })
+        
+    }
+    
 }
 
