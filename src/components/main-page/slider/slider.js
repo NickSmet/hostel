@@ -9,7 +9,7 @@ import './slider.css';
 
 class Slider extends React.Component {
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.loadImgs();
     }
 
@@ -18,6 +18,7 @@ class Slider extends React.Component {
             return (
                 <img key={item.id} 
                     className='main-gallery-img' 
+                    //src={item.path.replace('..', 'http://dev.centeral.ru')} alt="Фото"
                     src={item.path.replace('..', 'http://dev.centeral.ru')} alt="Фото"
                 />
             );

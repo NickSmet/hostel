@@ -15,7 +15,8 @@ const initialState = {
         },
         mainGallery: {
             imgs: [],
-            cat: 'all'
+            cat: 'all',
+            open: false
         },
         slider: {
             imgs: []
@@ -114,6 +115,17 @@ const reducer = (state = initialState, action) => {
                     mainGallery: {
                         ...state.ui.mainGallery,
                         cat: action.cat
+                    }
+                }
+            }
+        case types.OPEN_GALLERY_IMG:
+            return {
+                ...state,
+                ui: {
+                    ...state.ui,
+                    mainGallery: {
+                        ...state.ui.mainGallery,
+                        open: action.path
                     }
                 }
             }

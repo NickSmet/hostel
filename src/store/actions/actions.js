@@ -7,6 +7,7 @@ export const GET_MAIN_GALLERY_IMGS = 'GET_MAIN_GALLERY_IMGS';
 export const GET_SLIDER_IMGS = 'GET_SLIDER_IMGS';
 export const CHANGE_GALLERY_CAT = 'CHANGE_GALLERY_CAT';
 export const GET_GALLERY_IMGS = 'GET_GALLERY_IMGS';
+export const OPEN_GALLERY_IMG = 'OPEN_GALLERY_IMG';
 
 export const saveContacts = (contacts) => {
     return {
@@ -45,26 +46,12 @@ export const saveGalleryImgs = (imgs) => {
     }
 }
 
-export const getGalleryImgs = (cat) => {
+export const getGalleryImgs = () => {
     return dispatch => {
-        getData.getGalleryImgs(cat).then(res => {
+        getData.getGalleryImgs().then(res => {
             dispatch(saveGalleryImgs(res.data));
         })
     };
 }
 
-export const changeGalleryCat = (cat) => {
-    return dispatch => {
-        //getGalleryImgs(cat);
-        getData.getGalleryImgs(cat).then(res => {
-            dispatch(saveGalleryImgs(res.data));
-            dispatch({
-                type: CHANGE_GALLERY_CAT,
-                cat: cat
-            });
-        })
-        
-    }
-    
-}
 
