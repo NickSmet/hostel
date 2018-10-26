@@ -77,13 +77,14 @@ div.cat-active {
     width: 100%;
     height: 100%;
     position: relative;
+    top: -33.33333333vw;
 }
 
 .gallery-item-mask {
     width: 100%;
     height: 100%;
     position: relative;
-    top: -33.33333333vw;
+    
     background-color: #000;
     opacity: 0;
     border: 5px solid #fff;
@@ -96,7 +97,7 @@ div.cat-active {
 }
 
 .gallery-item-mask-wrapper:hover div.gallery-zoom-btn {
-    top: calc(-60% - 30px);
+    top: calc(50% - 50px);
     opacity: 1;
 }
 
@@ -114,7 +115,7 @@ div.cat-active {
     width: 50px;
     color: #fff;
     position: absolute;
-    top: calc(-70% - 30px);
+    top: -30px;
     left: calc(50% - 23px);
     border-radius: 100%;
     font-size: 1.5rem;
@@ -128,7 +129,7 @@ div.cat-active {
 
 .gallery-item-title {
     position: absolute;
-    top: calc(-40% - 30px);
+    top: calc(50% + 20px);
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -137,7 +138,7 @@ div.cat-active {
     perspective-origin: center center;
     transform-origin: bottom;
     perspective: 300px;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s ease;
     transform: rotateX(90deg) scale(0.8);
 }
@@ -172,14 +173,12 @@ div.cat-active {
 
 @media (max-width: 576px) {
 
-    
-
     .gallery-item {
         width: 100%;
         height: 100vw;
     }
     
-    .gallery-item-mask {
+    .gallery-item-mask-wrapper {
         top: -100vw;
     }
 
@@ -200,7 +199,7 @@ div.cat-active {
         height: 33.33333333vw;
     }
     
-    .gallery-item-mask {
+    .gallery-item-mask-wrapper {
         top: -33.3333333vw;
     }
 }
@@ -211,7 +210,7 @@ div.cat-active {
         height: 33.33333333vw;
     }
     
-    .gallery-item-mask {
+    .gallery-item-mask-wrapper {
         top: -33.3333333vw;
     }
 }
@@ -222,7 +221,7 @@ div.cat-active {
         height: 25vw;
     }
     
-    .gallery-item-mask {
+    .gallery-item-mask-wrapper {
         top: -25vw;
     }
 
