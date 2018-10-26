@@ -33,7 +33,6 @@ class GalleryMain extends React.Component {
                         //path={ item.path } 
                     />
             );
-            return <div>Ошибка</div>
         });
     }
 

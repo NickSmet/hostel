@@ -18,7 +18,7 @@ class Info extends React.Component {
                         alt="Изображение" />
                 </div>
                 
-                <div>
+                <div className='info-text-wrapper'>
                     <h2>{this.props.info.title}</h2>
                     <div className='info-text'>{this.props.info.text}</div>
                 </div>
