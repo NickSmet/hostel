@@ -8,6 +8,8 @@ export const GET_SLIDER_IMGS = 'GET_SLIDER_IMGS';
 export const CHANGE_GALLERY_CAT = 'CHANGE_GALLERY_CAT';
 export const GET_GALLERY_IMGS = 'GET_GALLERY_IMGS';
 export const OPEN_GALLERY_IMG = 'OPEN_GALLERY_IMG';
+export const GET_INFO = 'GET_INFO';
+
 
 export const saveContacts = (contacts) => {
     return {
@@ -52,6 +54,21 @@ export const getGalleryImgs = () => {
             dispatch(saveGalleryImgs(res.data));
         })
     };
+}
+
+export const saveInfo = (info) => {
+    return {
+        type: GET_INFO,
+        info: info
+    }
+}
+
+export const getInfo =() => {
+    return dispatch => {
+        getData.getMainInfo().then(res => {
+            dispatch(saveInfo(res.data[0]));
+        })
+    }
 }
 
 

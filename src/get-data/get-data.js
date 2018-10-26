@@ -5,4 +5,5 @@ export const getGalleryImgs = (cat) => axios.post('http://dev.centeral.ru/php/ge
     'category': 'all'
 });
 export const getSliderImgs = () => axios.get('http://dev.centeral.ru/php/getSliderImgs.php');
+export const getMainInfo = () => axios.get('http://dev.centeral.ru/php/getMainPageInfoBlock.php');
 

@@ -2,10 +2,20 @@ import * as types from '../actions/actions';
 
 const initialState = {
     en: {
-        contacts: {}  
+        contacts: {},
+        info:{
+            title: '',
+            text: '',
+            image: ''
+        } 
     },
     ru: {
-        contacts: {}  
+        contacts: {},
+        info:{
+            title: '',
+            text: '',
+            image: ''
+        }   
     },
     ui: {
         main: {
@@ -29,6 +39,7 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case types.GET_CONTACTS:
             let ru = {
+                ...state.ru,
                 contacts: {
                     address: action.contacts.address,
                     email: action.contacts.email,
@@ -41,6 +52,7 @@ const reducer = (state = initialState, action) => {
                 }    
             };
             let en = {
+                ...state.en,
                 ...ru,
                 contacts: {
                     ...ru.contacts,
@@ -127,6 +139,18 @@ const reducer = (state = initialState, action) => {
                         ...state.ui.mainGallery,
                         open: action.path
                     }
+                }
+            }
+        case types.GET_INFO:
+            return {
+                ...state,
+                ru: {
+                    ...state.ru,
+                    info: {...action.info}
+                },
+                en: {
+                    ...state.en,
+                    info: {...action.info}
                 }
             }
         default:
