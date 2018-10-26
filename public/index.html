@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1">
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Central Hotel & Hostel</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <title>Central Hotel & Hostel</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  
+  <script src="http://widget.bnovo.ru/v2/js/bnovo.js"></script>
+  <script type="text/javascript">
+    Bnovo_Widget.init(function () {
+      Bnovo_Widget.open('_bn_widget_', {
+        type: "horizontal",
+        lcode: "1484303494",
+        lang: "ru",
+        width: "100%",
+        background: "#ffffff",
+        bg_alpha: "100",
+        border: "on",
+        border_color: "#23A6DA",
+        padding: "30",
+        border_radius: "0",
+        font_type: "arial",
+        font_size: "16",
+        without_title: "on",
+        title_color: "#222222",
+        title_size: "18",
+        inp_color: "#222222",
+        inp_bordhover: "#23A6DA",
+        inp_bordcolor: "#a1a1a1",
+        inp_alpha: "100",
+        btn_background: "#108dbd",
+        btn_background_over: "#108dbd",
+        btn_textcolor: "#ffffff",
+        btn_textover: "#ffffff",
+        btn_bordcolor: "#cccccc",
+        btn_bordhover: "#cccccc",
+        btn_text: "Проверить наличие",
+        text_concierge: "Получи скидку через Bnovo Concierge"
+      });
+    });
+  </script>
+
+</body>
+
 </html>
