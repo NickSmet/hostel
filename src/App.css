@@ -8,3 +8,23 @@ body {
     padding-right: 0;
 }
 
+.ScrollUpButton__Container {
+    background-color: #289152e6 !important;
+    transition: all 0.3s ease !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    
+}
+
+.ScrollUpButton__Container:hover {
+    transform: translateY(-5px);
+}
+
+.ScrollUpButton__Container svg {
+    fill: #fff;
+    width: 30px;
+    opacity: 0.7;
+}

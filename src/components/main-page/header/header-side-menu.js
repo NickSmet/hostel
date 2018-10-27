@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class HeaderSideMenu extends React.Component {
     render() {
         return (
-            <div className={this.props.leftMenuIsOpen ? 'side-menu-items-wrapper' : 'side-menu-items-wrapper hide-side-menu'}>
+            <div className={this.props.leftMenuIsOpen ? 'side-menu-items-wrapper show-side-menu' : 'side-menu-items-wrapper hide-side-menu'}>
                 <ul className='side-menu-items'>
                     <li>
                         <a href='#item'>ГЛАВНАЯ</a>

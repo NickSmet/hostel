@@ -11,6 +11,7 @@ import Gallery from './components/main-page/gallery/gallery';
 import Book from './components/main-page/wubook/book';
 import Info from './components/main-page/info/info';
 import Footer from './components/main-page/footer/footer';
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 
 class App extends Component {
   render() {
@@ -24,6 +25,8 @@ class App extends Component {
         <Book />
         <Info />
         <Footer />
+        <ScrollUpButton/>
+          
       </div>
     );
   }
