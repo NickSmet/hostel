@@ -43,3 +43,9 @@
     background-color: #2a2f3c;
     color: #fff;
 }
+
+@media screen and (max-width: 480px) {
+    .footer-logo {
+        display: none;
+    }
+}
