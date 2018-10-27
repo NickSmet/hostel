@@ -10,6 +10,7 @@ import Slider from './components/main-page/slider/slider';
 import Gallery from './components/main-page/gallery/gallery';
 import Book from './components/main-page/wubook/book';
 import Info from './components/main-page/info/info';
+import Footer from './components/main-page/footer/footer';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         <Gallery />
         <Book />
         <Info />
+        <Footer />
       </div>
     );
   }

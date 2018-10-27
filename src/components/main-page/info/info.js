@@ -9,7 +9,6 @@ class Info extends React.Component {
     }
 
     render() {
-        console.log('component:', this.props.info);
         return (
             <div className='info'>
                 <div className='info-img-wrapper'>
