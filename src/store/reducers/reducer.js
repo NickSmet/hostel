@@ -31,6 +31,9 @@ const initialState = {
         slider: {
             imgs: []
         }
+    },
+    visa: {
+        iframe: ''
     }
 };
 
@@ -151,6 +154,13 @@ const reducer = (state = initialState, action) => {
                 en: {
                     ...state.en,
                     info: {...action.info}
+                }
+            }
+        case types.GET_VISA:
+            return {
+                ...state,
+                visa: {
+                    iframe: action.iframe
                 }
             }
         default:

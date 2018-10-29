@@ -37,9 +37,7 @@ class Slider extends React.Component {
             fade: true,
             cssEase: "ease"
           };
-
           
-
           return (
             <div className='main-slider-wrapper'>
               <SlickSlider {...settings}>

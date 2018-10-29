@@ -1,33 +1,41 @@
 import React, { Component } from 'react';
+import {
+	Route,
+	Link,
+	HashRouter
+} from 'react-router-dom';
+
 import './fonts/font-hilltericon.css';
 import './fonts/font-awesome.min.css';
 import './fonts/stylesheet.css';
 import './App.css';
+import MainPage from './components/main-page/main-page';
 import Header from './components/main-page/header/header';
+import Footer from './components/main-page/footer/footer';
 import HeaderMainMenu from './components/main-page/header/header-main-menu';
 import MobileHeaderMainMenu from './components/main-page/header/mobile-header-main-menu';
-import Slider from './components/main-page/slider/slider';
-import Gallery from './components/main-page/gallery/gallery';
-import Book from './components/main-page/wubook/book';
-import Info from './components/main-page/info/info';
-import Footer from './components/main-page/footer/footer';
 import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
+import Visa from './components/visa/visa';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <HeaderMainMenu />
-        <MobileHeaderMainMenu />
-        <Slider />
-        <Gallery />
-        <Book />
-        <Info />
-        <Footer />
-        <ScrollUpButton/>
-          
-      </div>
+      <HashRouter >
+        <div className="App">
+          <Header />
+          <HeaderMainMenu />
+          <MobileHeaderMainMenu />
+            <Route
+              path="//"
+              render={ MainPage } />
+            <Route
+              path="/visa"
+              component={ Visa } />
+          <Footer />
+          <ScrollUpButton/>
+        </div>
+      </HashRouter>
+      
     );
   }
 }

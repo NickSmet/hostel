@@ -7,7 +7,7 @@ class HeaderSideMenu extends React.Component {
             <div className={this.props.leftMenuIsOpen ? 'side-menu-items-wrapper show-side-menu' : 'side-menu-items-wrapper hide-side-menu'}>
                 <ul className='side-menu-items'>
                     <li>
-                        <a href='#item'>ГЛАВНАЯ</a>
+                        <a href='/#/'>ГЛАВНАЯ</a>
                     </li>
                     <li>
                         <a href='#item'>ОТЕЛЬ</a>
@@ -19,7 +19,7 @@ class HeaderSideMenu extends React.Component {
                         <a href='#item'>ГРУППОВОЕ БРОНИРОВАНИЕ</a>
                     </li>
                     <li>
-                        <a href='#item'>ВИЗОВАЯ ПОДДЕРЖКА</a>
+                        <a href='/#/visa'>ВИЗОВАЯ ПОДДЕРЖКА</a>
                     </li>
                     <li>
                         <a href='#item'>ТРАНСФЕР</a>
