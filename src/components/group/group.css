@@ -1,0 +1,90 @@
+.group {
+    width: 100%;
+}
+
+.group-title {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.group h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.group h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.group-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.group-left, .group-right {
+    width: 50%;
+}
+
+.group-right {
+    margin-left: 60px;
+}
+
+.group-info p {
+    font-size: 15px;
+}
+
+.group-contacts {
+    margin: 40px 0;
+}
+
+.group-contacts-item {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.group-contacts-item i {
+    margin-right: 20px;
+    color: #ffce14;
+    font-size: 20px;
+}
+
+.group-contacts-item a {
+    margin-right: 20px;
+    color: #232323;
+}
+
+.form-btn {
+    margin-top: 20px;
+}
+
+.form-btn:hover {
+    opacity: 0.9;
+    background-color: #108b52;
+}
+
+@media (max-width: 768px) {
+    .group-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .group-left, .group-right {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .group {
+        width: 95%;
+        transform: translateX(2.5%)
+    }
+
+
+}
+

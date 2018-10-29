@@ -2,7 +2,7 @@ import React from 'react';
 import './footer.css';
 import FooterLogo from './footer-logo';
 import { connect } from 'react-redux';
-import FooterContacts from './footer-contacts';
+import FooterContacts from './../../shared/contacts';
 import FooterCopy from './footer-copy';
 
 class Footer extends React.Component {
@@ -12,7 +12,7 @@ class Footer extends React.Component {
                     <div className='container'>
                         <div className='footer-container'>
                             <FooterLogo />
-                            <FooterContacts contacts={this.props.contacts} />
+                            <FooterContacts component='footer' contacts={this.props.contacts} />
                         </div>    
                     </div>
                     <FooterCopy />

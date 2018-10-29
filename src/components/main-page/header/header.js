@@ -6,7 +6,7 @@ import { getContacts } from './../../../store/actions/actions.js';
 import HeaderContacts from './header-contacts';
 import HeaderSocial from './header-social';
 import HeaderTopMenu from './header-top-menu';
-import HeaderBookBtn from './header-book-btn';
+import HeaderBookBtn from './../../shared/btn';
 
 
 import './header.css';

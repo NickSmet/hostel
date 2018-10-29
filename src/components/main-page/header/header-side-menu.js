@@ -16,7 +16,7 @@ class HeaderSideMenu extends React.Component {
                         <a href='#item'>ХОСТЕЛ</a>
                     </li>
                     <li>
-                        <a href='#item'>ГРУППОВОЕ БРОНИРОВАНИЕ</a>
+                        <a href='/#/groups'>ГРУППОВОЕ БРОНИРОВАНИЕ</a>
                     </li>
                     <li>
                         <a href='/#/visa'>ВИЗОВАЯ ПОДДЕРЖКА</a>

@@ -64,24 +64,6 @@ div.col__header-book-btn {
     font-size: 15px;
 }
 
-/* Header Book Button */
-
-.header-book-btn {
-    display: block;
-    color: #fff;
-    background-color: #108b52;
-    font-size: 14px;
-    padding: 10.5px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.header-book-btn:hover {
-    background-color: #ffce14;
-    text-decoration: none;
-    color: #fff;
-}
-
 /* Main Menu */
 
 .mobile-main-menu-wrapper {

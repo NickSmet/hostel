@@ -9,6 +9,7 @@ import './fonts/font-hilltericon.css';
 import './fonts/font-awesome.min.css';
 import './fonts/stylesheet.css';
 import './App.css';
+import './components/shared/shared.css';
 import MainPage from './components/main-page/main-page';
 import Header from './components/main-page/header/header';
 import Footer from './components/main-page/footer/footer';
@@ -16,6 +17,7 @@ import HeaderMainMenu from './components/main-page/header/header-main-menu';
 import MobileHeaderMainMenu from './components/main-page/header/mobile-header-main-menu';
 import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 import Visa from './components/visa/visa';
+import Group from './components/group/group';
 
 class App extends Component {
   render() {
@@ -31,6 +33,9 @@ class App extends Component {
             <Route
               path="/visa"
               component={ Visa } />
+            <Route
+              path="/groups"
+              component={ Group } />
           <Footer />
           <ScrollUpButton/>
         </div>
