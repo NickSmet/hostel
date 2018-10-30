@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
 	Route,
-	Link,
 	HashRouter
 } from 'react-router-dom';
 
@@ -18,6 +17,7 @@ import MobileHeaderMainMenu from './components/main-page/header/mobile-header-ma
 import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 import Visa from './components/visa/visa';
 import Group from './components/group/group';
+import Transfer from './components/transfer/transfer';
 
 class App extends Component {
   render() {
@@ -36,6 +36,9 @@ class App extends Component {
             <Route
               path="/groups"
               component={ Group } />
+            <Route
+              path="/transfer"
+              render={ Transfer } />
           <Footer />
           <ScrollUpButton/>
         </div>

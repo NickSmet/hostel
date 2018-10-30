@@ -1,0 +1,28 @@
+.transfer-title h2 {
+    font-weight: bold;
+}
+
+.transfer-title h3 {
+    font-weight: 600;
+}
+
+.transfer-title {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.transfer-from {
+    padding-bottom: 50px;
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width : 767px) {
+    .transfer-from {
+        width: 95%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -57,7 +57,7 @@ class GroupForm extends React.Component {
                     Телефон для связи
                     <input type="text" />
                 </label>
-                <Button additionalClass={'form-btn'} />
+                <Button additionalClass={'form-btn'} title='ЗАБРОНИРОВАТЬ' />
             </div>
         );
     }

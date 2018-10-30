@@ -33,7 +33,7 @@ class Header extends Component {
                                 <HeaderTopMenu />
                             </Col>
                             <Col xs={12} sm={4} md={2} className='col__header-book-btn'>
-                                <HeaderBookBtn />
+                                <HeaderBookBtn title='ЗАБРОНИРОВАТЬ' />
                             </Col>
                         </div>
                     </Row>

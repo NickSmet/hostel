@@ -22,7 +22,7 @@ class HeaderSideMenu extends React.Component {
                         <a href='/#/visa'>ВИЗОВАЯ ПОДДЕРЖКА</a>
                     </li>
                     <li>
-                        <a href='#item'>ТРАНСФЕР</a>
+                        <a href='/#/transfer'>ТРАНСФЕР</a>
                     </li>
                     <li>
                         <a href='#item'>КОНТАКТЫ</a>
