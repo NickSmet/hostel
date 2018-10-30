@@ -33,7 +33,11 @@ class Header extends Component {
                                 <HeaderTopMenu />
                             </Col>
                             <Col xs={12} sm={4} md={2} className='col__header-book-btn'>
-                                <HeaderBookBtn title='ЗАБРОНИРОВАТЬ' />
+                                <HeaderBookBtn 
+                                    title='ЗАБРОНИРОВАТЬ' 
+                                    isLink={true} 
+                                    href={'https://wubook.net/wbkd/wbk/?lcode=1484303494'} 
+                                />
                             </Col>
                         </div>
                     </Row>

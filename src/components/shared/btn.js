@@ -1,10 +1,21 @@
 import React from 'react';
 
-const Btn = ({additionalClass, title}) => {
+const Btn = ({additionalClass, title, isLink, href}) => {
     return (
-        <a href='https://wubook.net/wbkd/wbk/?lcode=1484303494' className={'main-btn ' + additionalClass}>
-            { title }
-        </a>
+        <div>
+            {
+                isLink ? 
+                <a href={ href } className={'main-btn ' + additionalClass}>
+                    { title }
+                </a>
+                :
+                <div className={'main-btn ' + additionalClass}>
+                    { title }
+                </div>
+            }
+        </div>
+        
+        
     );
 }
 
