@@ -18,6 +18,7 @@ import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 import Visa from './components/visa/visa';
 import Group from './components/group/group';
 import Transfer from './components/transfer/transfer';
+import Contacts from './components/contacts/contacts';
 
 class App extends Component {
   render() {
@@ -39,6 +40,9 @@ class App extends Component {
             <Route
               path="/transfer"
               render={ Transfer } />
+            <Route
+              path="/contacts"
+              component={ Contacts } />
           <Footer />
           <ScrollUpButton/>
         </div>

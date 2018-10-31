@@ -1,0 +1,61 @@
+.contacts {
+    padding-bottom: 40px;
+}
+
+.contacts h2 {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.contacts h3 {
+    font-weight: 700;
+}
+
+.contacts p {
+    font-size: 21px;
+}
+
+.contacts strong {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.contacts-contacts div {
+    font-size: 21px;
+}
+
+.contacts-descr span {
+    font-weight: 700;
+}
+
+.contacts-way-heading {
+    background-color: #fff;
+    padding: 20px 0;
+    transition: all 0.2s ease;
+}
+
+.contacts-way-heading a {
+    color: #333;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 21px;
+}
+
+.contacts-ways img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .contacts {
+        padding: 0 15px 0 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .contacts strong {
+        display: block;
+        padding: 5px 0;
+    }
+
+}

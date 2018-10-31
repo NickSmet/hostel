@@ -25,7 +25,7 @@ class HeaderSideMenu extends React.Component {
                         <a href='/#/transfer'>ТРАНСФЕР</a>
                     </li>
                     <li>
-                        <a href='#item'>КОНТАКТЫ</a>
+                        <a href='/#/contacts'>КОНТАКТЫ</a>
                     </li>
                 </ul>
             </div>

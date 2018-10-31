@@ -5,7 +5,7 @@ const HeaderMainMenuBtns = () => {
         <div>
             <ul className='main-menu-items'>
                 <li>
-                    <a href='#item'>КОНТАКТЫ</a>
+                    <a href='/#/contacts'>КОНТАКТЫ</a>
                 </li>
                 <li>
                     <a href='/#/transfer'>ТРАНСФЕР</a>
