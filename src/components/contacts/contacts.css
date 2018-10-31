@@ -44,11 +44,26 @@
 
 .contacts-ways img {
     width: 100%;
+} 
+
+.contacts-form-wrapper {
+    width: 33.333333%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0 40px 0;
+}
+
+.contacts-form.main-btn {
+    width: 150px;
 }
 
 @media only screen and (max-width: 767px) {
     .contacts {
         padding: 0 15px 0 15px;
+    }
+
+    .contacts-form-wrapper {
+        width: 100%;
     }
 }
 

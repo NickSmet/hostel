@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import ContactsBlock from './contacts-contacts';
 import Description from './contacts-descr';
 import Ways from './contacts-ways';
+import Form from './contacts-form';
+
 
 import './contacts.css';
 
@@ -15,6 +17,7 @@ const Contacts = ({ contacts }) => {
                 <Description />
                 <h3>Как до нас добраться:</h3>
                 <Ways />
+                <Form />
             </div>
             
         </div>
