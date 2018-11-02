@@ -7,4 +7,4 @@ export const getGalleryImgs = (cat) => axios.post('http://dev.centeral.ru/php/ge
 export const getSliderImgs = () => axios.get('http://dev.centeral.ru/php/getSliderImgs.php');
 export const getMainInfo = () => axios.get('http://dev.centeral.ru/php/getMainPageInfoBlock.php');
 export const getVisa = () => axios.get('http://dev.centeral.ru/php/getVisa.php');
-
+export const getFaq = () => axios.get('http://dev.centeral.ru/php/getFaq.php');

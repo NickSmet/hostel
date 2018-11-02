@@ -7,7 +7,8 @@ const initialState = {
             title: '',
             text: '',
             image: ''
-        } 
+        },
+        faq: []
     },
     ru: {
         contacts: {},
@@ -15,7 +16,8 @@ const initialState = {
             title: '',
             text: '',
             image: ''
-        }   
+        },
+        faq: [] 
     },
     ui: {
         main: {
@@ -41,32 +43,21 @@ const reducer = (state = initialState, action) => {
     let justClosed = false;
     switch (action.type) {
         case types.GET_CONTACTS:
-            let ru = {
-                ...state.ru,
-                contacts: {
-                    address: action.contacts.address,
-                    email: action.contacts.email,
-                    fb: action.contacts.fb,
-                    ig: action.contacts.ig,
-                    phone: action.contacts.phone,
-                    sales_phone: action.contacts.sales_phone,
-                    ta: action.contacts.ta,
-                    vk: action.contacts.vk,
-                }    
-            };
-            let en = {
-                ...state.en,
-                ...ru,
-                contacts: {
-                    ...ru.contacts,
-                    address: action.contacts.address_eng
-                } 
-                
-            };
             return {
                 ...state,
-                en: en,
-                ru: ru
+                en: {
+                    ...state.en,
+                    contacts: {
+                        ...action.contacts,
+                        address: action.contacts.address_eng
+                    }
+                },
+                ru: {
+                    ...state.ru,
+                    contacts: {
+                        ...action.contacts,
+                    }
+                }
 
             }
         case types.GET_GALLERY_IMGS:
@@ -161,6 +152,33 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 visa: {
                     iframe: action.iframe
+                }
+            }
+        case types.GET_FAQ:
+            let faq = Object.entries(action.faq);
+            let faqEn = [];
+            let faqRu = [];
+            faq.forEach((item) => {
+                faqEn.push({
+                    id: item[1].id, 
+                    name: item[1].name_eng,
+                    description: item[1].description_eng
+                });
+                faqRu.push({
+                    id: item[1].id, 
+                    name: item[1].name,
+                    description: item[1].description
+                });
+            });
+            return {
+                ...state,
+                ru: {
+                    ...state.ru,
+                    faq: faqRu
+                },
+                en: {
+                    ...state.en,
+                    faq: faqEn
                 }
             }
         default:

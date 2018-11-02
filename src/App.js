@@ -19,6 +19,7 @@ import Visa from './components/visa/visa';
 import Group from './components/group/group';
 import Transfer from './components/transfer/transfer';
 import Contacts from './components/contacts/contacts';
+import FAQ from './components/faq/faq';
 
 class App extends Component {
   render() {
@@ -43,6 +44,9 @@ class App extends Component {
             <Route
               path="/contacts"
               component={ Contacts } />
+            <Route
+              path="/faq"
+              component={ FAQ } />
           <Footer />
           <ScrollUpButton/>
         </div>

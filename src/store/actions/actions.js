@@ -10,7 +10,7 @@ export const GET_GALLERY_IMGS = 'GET_GALLERY_IMGS';
 export const OPEN_GALLERY_IMG = 'OPEN_GALLERY_IMG';
 export const GET_INFO = 'GET_INFO';
 export const GET_VISA = 'GET_VISA';
-
+export const GET_FAQ = 'GET_FAQ';
 
 export const saveContacts = (contacts) => {
     return {
@@ -83,6 +83,21 @@ export const getVisa =() => {
     return dispatch => {
         getData.getVisa().then(res => {
             dispatch(saveVisa(res.data[0].iframe));
+        })
+    }
+}
+
+export const saveFaq = (faq) => {
+    return {
+        type: GET_FAQ,
+        faq: faq
+    }
+}
+
+export const getFaq =() => {
+    return dispatch => {
+        getData.getFaq().then(res => {
+            dispatch(saveFaq(res.data));
         })
     }
 }
