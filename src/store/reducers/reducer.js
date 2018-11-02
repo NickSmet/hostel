@@ -8,7 +8,8 @@ const initialState = {
             text: '',
             image: ''
         },
-        faq: []
+        faq: [],
+        rooms: []
     },
     ru: {
         contacts: {},
@@ -17,7 +18,8 @@ const initialState = {
             text: '',
             image: ''
         },
-        faq: [] 
+        faq: [],
+        rooms: []
     },
     ui: {
         main: {
@@ -180,6 +182,83 @@ const reducer = (state = initialState, action) => {
                     ...state.en,
                     faq: faqEn
                 }
+            }
+        case types.GET_ROOMS:
+            let rooms = Object.entries(action.rooms);
+            let roomsEn = [];
+            let roomsRu = [];
+            let shared = {};
+            rooms.forEach((item) => {
+                let extra = Object.entries(item[1].extra);
+                let options = Object.entries(item[1].options);
+                let extraEn = [];
+                let extraRu = [];
+                let optionsEn = [];
+                let optionsRu = [];
+
+                extra.forEach((item) => {
+                    extraEn.push({
+                        price: item[1].price, 
+                        name: item[1].name_eng,
+                        description: item[1].description_eng
+                    });
+                    extraRu.push({
+                        price: item[1].price, 
+                        name: item[1].name,
+                        description: item[1].description
+                    });
+                });
+                options.forEach((item) => {
+                    optionsEn.push({
+                        name: item[1].name_eng,
+                        description: item[1].description_eng
+                    });
+                    optionsRu.push({
+                        name: item[1].name,
+                        description: item[1].description
+                    });
+                });
+
+                shared = {
+                    main_image: item[1].main_image,
+                    iframe: item[1].iframe,
+                    images: item[1].images,
+                    price: item[1].price,
+                    category: item[1].category
+                };
+
+                roomsEn.push({
+                    id: item[1].id, 
+                    name: item[1].name_eng,
+                    description: item[1].description_eng,
+                    options: optionsEn,
+                    extra: extraEn,
+                    ...shared
+                });
+                roomsRu.push({
+                    id: item[1].id, 
+                    name: item[1].name,
+                    description: item[1].description,
+                    options: optionsRu,
+                    extra: extraRu,
+                    ...shared
+                });
+            });
+            return {
+                ...state,
+                ru: {
+                    ...state.ru,
+                    rooms: [
+                        ...roomsRu
+                    ]
+                },
+                en: {
+                    ...state.en,
+                    rooms: [
+                        ...roomsEn
+                    ]
+                }
+                
             }
         default:
             return {

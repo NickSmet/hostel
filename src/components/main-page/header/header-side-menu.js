@@ -10,10 +10,10 @@ class HeaderSideMenu extends React.Component {
                         <a href='/#/'>ГЛАВНАЯ</a>
                     </li>
                     <li>
-                        <a href='#item'>ОТЕЛЬ</a>
+                        <a href='/#/hotel'>ОТЕЛЬ</a>
                     </li>
                     <li>
-                        <a href='#item'>ХОСТЕЛ</a>
+                        <a href='/#/hostel'>ХОСТЕЛ</a>
                     </li>
                     <li>
                         <a href='/#/groups'>ГРУППОВОЕ БРОНИРОВАНИЕ</a>

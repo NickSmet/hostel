@@ -20,6 +20,7 @@ import Group from './components/group/group';
 import Transfer from './components/transfer/transfer';
 import Contacts from './components/contacts/contacts';
 import FAQ from './components/faq/faq';
+import Rooms from './components/rooms/rooms';
 
 class App extends Component {
   render() {
@@ -47,6 +48,12 @@ class App extends Component {
             <Route
               path="/faq"
               component={ FAQ } />
+            <Route
+              path="/hotel"
+              render={ () => <Rooms cat='hotel' /> } />
+            <Route
+              path="/hostel"
+              render={ () => <Rooms cat='hostel' /> } />
           <Footer />
           <ScrollUpButton/>
         </div>

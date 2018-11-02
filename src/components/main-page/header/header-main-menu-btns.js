@@ -17,10 +17,10 @@ const HeaderMainMenuBtns = () => {
                     <a href='/#/groups'>ГРУППОВОЕ БРОНИРОВАНИЕ</a>
                 </li>
                 <li>
-                    <a href='#item'>ХОСТЕЛ</a>
+                    <a href='/#/hostel'>ХОСТЕЛ</a>
                 </li>
                 <li>
-                    <a href='#item'>ОТЕЛЬ</a>
+                    <a href='/#/hotel'>ОТЕЛЬ</a>
                 </li>
                 <li>
                     <a href='/#/'>ГЛАВНАЯ</a>

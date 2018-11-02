@@ -8,3 +8,4 @@ export const getSliderImgs = () => axios.get('http://dev.centeral.ru/php/getSlid
 export const getMainInfo = () => axios.get('http://dev.centeral.ru/php/getMainPageInfoBlock.php');
 export const getVisa = () => axios.get('http://dev.centeral.ru/php/getVisa.php');
 export const getFaq = () => axios.get('http://dev.centeral.ru/php/getFaq.php');
+export const getRooms = () =>axios.post('http://dev.centeral.ru/php/getRoomData.php');

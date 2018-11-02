@@ -11,6 +11,7 @@ export const OPEN_GALLERY_IMG = 'OPEN_GALLERY_IMG';
 export const GET_INFO = 'GET_INFO';
 export const GET_VISA = 'GET_VISA';
 export const GET_FAQ = 'GET_FAQ';
+export const GET_ROOMS = 'GET_ROOMS';
 
 export const saveContacts = (contacts) => {
     return {
@@ -98,6 +99,21 @@ export const getFaq =() => {
     return dispatch => {
         getData.getFaq().then(res => {
             dispatch(saveFaq(res.data));
+        })
+    }
+}
+
+export const saveRooms = (rooms) => {
+    return {
+        type: GET_ROOMS,
+        rooms: rooms
+    }
+}
+
+export const getRooms =() => {
+    return dispatch => {
+        getData.getRooms().then(res => {
+            dispatch(saveRooms(res.data));
         })
     }
 }

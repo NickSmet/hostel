@@ -1,0 +1,60 @@
+.rooms {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.rooms h1 {
+    font-weight: 700;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.room-btn {
+    width: 180px;
+}
+
+.room img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.room-plate {
+    padding: 20px;
+    background-color: #fff;
+    width: 80%;
+    margin-left: 50%;
+    transform: translate(-50%, -70px); 
+}
+
+.room-plate>div {
+    margin: 20px;
+}
+
+.room-title {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.room-title>span {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.room-title>span:hover {
+    color: #108B52;
+}
+
+.room-price {
+    font-size: 21px;
+}
+
+@media (max-width: 470px) {
+    .room-plate {
+        padding: 20px 0;
+        width: 100%;
+        margin-left: 0;
+        transform: translate(0, 0); 
+    }
+}
