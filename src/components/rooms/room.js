@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import * as actions from './../../store/actions/actions'
 import Slider from './room-slider';
 import RoomInfo from './room-info';
+import Book from './../shared/wubook-btn.js';
+
 
 class Room extends React.Component {
 
