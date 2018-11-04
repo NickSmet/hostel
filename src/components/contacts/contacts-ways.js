@@ -8,7 +8,6 @@ class Ways extends React.Component {
     };
 
     handleSelect = (activeKey) => {
-        console.log(activeKey);
         this.setState({ activeKey });
     };
 

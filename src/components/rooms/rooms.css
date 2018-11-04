@@ -19,6 +19,11 @@
     object-fit: cover;
 }
 
+.room a {
+    text-decoration: none;
+    color: #333;
+}
+
 .room-plate {
     padding: 20px;
     background-color: #fff;
@@ -50,6 +55,128 @@
     font-size: 21px;
 }
 
+.thumbs-wrapper {
+    margin: 20px 0 !important;
+}
+
+ul {
+    padding-left: 0 !important;
+}
+
+.thumb.selected {
+    border: 3px solid #fff !important;
+}
+
+.thumb {
+    cursor: pointer;
+    width: 108px !important;
+    height: 108px !important;
+}
+
+.thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.thumb:hover {
+    border: 3px solid #fff !important;
+}
+
+.slide>div {
+    height: 400px !important;
+}
+
+.slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.room-slider {
+    padding: 40px 0;
+}
+
+/** Room Info  */
+
+.info-tabs {
+    width: 100%;
+    font-size: 21px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: solid 2px #dfdfdf;
+}
+
+.info-tab {
+    padding: 0 20px 10px 20px;
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
+.info-tab:hover {
+    font-weight: bold;
+}
+
+.info-tab.active {
+    border-bottom: 2px solid #108b52;
+    font-weight: bold;
+}
+
+.info-body {
+    font-size: 16px;
+    margin: 40px 0 80px 0;
+}
+
+.option {
+    border-bottom: solid 1px #dfdfdf;
+}
+
+.option-name {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.option-description {
+    font-size: 18px;
+}
+
+
+.option-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/**END Room Info  */
+
+.room-wubook {
+    background-color: #f4f4f4;
+    width: 40%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.room-wubook h3 {
+    font-weight: bold;
+    padding: 20px 20px 10px 20px;
+    font-size: 28px;
+}
+
+.room-wubook h4 {
+    padding: 0 20px 20px 20px;
+}
+
+.room-wubook span {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
 @media (max-width: 470px) {
     .room-plate {
         padding: 20px 0;
@@ -58,3 +185,29 @@
         transform: translate(0, 0); 
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .room-info-container {
+        margin: 0 15px;
+    }
+
+    .room-wubook {
+        width: 100%;
+    }
+
+    .info-tabs {
+        flex-direction: column;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .info-tab {
+        padding: 15px;
+    }
+
+    .info-tab.active {
+        border-bottom: none;
+        font-weight: bold;
+    }
+}
+

@@ -21,6 +21,7 @@ import Transfer from './components/transfer/transfer';
 import Contacts from './components/contacts/contacts';
 import FAQ from './components/faq/faq';
 import Rooms from './components/rooms/rooms';
+import Room from './components/rooms/room';
 
 class App extends Component {
   render() {
@@ -49,11 +50,19 @@ class App extends Component {
               path="/faq"
               component={ FAQ } />
             <Route
-              path="/hotel"
-              render={ () => <Rooms cat='hotel' /> } />
+              exact path="/hotel"
+              render={ () => <Rooms cat='hotel' /> } 
+            />
             <Route
-              path="/hostel"
-              render={ () => <Rooms cat='hostel' /> } />
+              path="/hotel/:number"
+              component={ Room }  />
+            <Route
+              path="/hostel/:number"
+              component={ Room }  />
+            <Route
+              exact path="/hostel"
+              render={ () => <Rooms cat='hostel' /> } 
+            />
           <Footer />
           <ScrollUpButton/>
         </div>

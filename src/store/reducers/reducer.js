@@ -34,7 +34,8 @@ const initialState = {
         },
         slider: {
             imgs: []
-        }
+        },
+        curRoom: ''
     },
     visa: {
         iframe: ''
