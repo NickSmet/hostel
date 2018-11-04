@@ -29,6 +29,10 @@
     font-weight: 700;
 }
 
+.contacts-contacts a {
+    color: #333;
+}
+
 .contacts-way-heading {
     background-color: #fff;
     padding: 20px 0;
