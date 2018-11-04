@@ -58,6 +58,11 @@
     color: #232323;
 }
 
+.form {
+    position: relative;
+    padding-bottom: 50px;
+}
+
 .form-btn {
     margin-top: 20px;
 }

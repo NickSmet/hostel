@@ -11,3 +11,19 @@ select, input, textarea {
 label {
     margin: 14px 0;
 }
+
+.form-alert {
+    position: absolute;
+    width: 100%;
+    font-size: 18px;
+    margin: 20px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.form-alert.active {
+    opacity: 1;
+    transform: translateY(0);
+}

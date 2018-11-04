@@ -40,7 +40,9 @@ class Room extends React.Component {
                             <div className='room-wubook'>
                                 <h3>{ room.name }</h3>
                                 <h4>От <span>{ room.price } ₽</span>/сутки</h4>
-                                
+                                <Book title='Забронировать' href={
+                "https://wubook.net/wbkd/wbk/?lcode=1484303494&lang=ru&wbgoogle=1&open_on_tab=1&creferrer=http://centeral.ru/"
+            }/>
                                 <div dangerouslySetInnerHTML={ this.iframeMarkup() }></div>
                             </div>
                             <RoomInfo room={ room }/>
