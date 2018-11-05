@@ -1,13 +1,14 @@
 import React from 'react';
 import './transfer.css';
 import TransferForm from './transfer-form';
+import { connect } from 'react-redux';
 
-const Transfer = () => {
+const Transfer = ({ transfer }) => {
     return (
         <div className='container'>
             <div className='transfer-title'>
-                <h2>Заказ трансфера</h2>
-                <h3>Пожалуйста, заполните форму, и мы свяжемся с Вами в ближайшее время.</h3>
+                <h2>{ transfer.title }</h2>
+                <h3>{ transfer.text }</h3>
             </div>
             <div className='transfer-from'>
                 <TransferForm />
@@ -17,4 +18,10 @@ const Transfer = () => {
     );
 }
 
-export default Transfer;
+const mapStateToProps = state => {
+    return {
+        transfer: state[state.lang].interface.transfer
+    }
+}
+
+export default connect(mapStateToProps)(Transfer);

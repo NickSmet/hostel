@@ -33,7 +33,7 @@ class App extends Component {
           <MobileHeaderMainMenu />
             <Route
               path="//"
-              render={ MainPage } />
+              component={ MainPage } />
             <Route
               path="/visa"
               component={ Visa } />
@@ -42,7 +42,7 @@ class App extends Component {
               component={ Group } />
             <Route
               path="/transfer"
-              render={ Transfer } />
+              component={ Transfer } />
             <Route
               path="/contacts"
               component={ Contacts } />

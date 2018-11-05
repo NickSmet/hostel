@@ -14,7 +14,13 @@ class Rooms extends React.Component {
         return (
             <div className="container">
                 <div className="rooms">
-                    <h1>Номера и цены</h1>
+                    {
+                        this.props.lang === 'en' ?
+                        <h1>Rooms and prices</h1>
+                        :
+                        <h1>Номера и цены</h1>
+                    }
+
                     {
                         this.props.rooms.map((item) => {
                             if(item.category === this.props.cat) {
@@ -32,7 +38,8 @@ class Rooms extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        rooms: state.ru.rooms
+        rooms: state[state.lang].rooms,
+        lang: state.lang
     }
 }
 

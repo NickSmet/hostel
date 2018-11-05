@@ -8,6 +8,10 @@ class Info extends React.Component {
         this.props.loadInfo();
     }
 
+    dangerousText() {
+        return{__html: this.props.info.text}
+    }
+
     render() {
         return (
             <div className='info'>
@@ -19,7 +23,7 @@ class Info extends React.Component {
                 
                 <div className='info-text-wrapper'>
                     <h2>{this.props.info.title}</h2>
-                    <div className='info-text'>{this.props.info.text}</div>
+                    <div className='info-text' dangerouslySetInnerHTML={ this.dangerousText() }></div>
                 </div>
             </div>
         );
@@ -28,7 +32,7 @@ class Info extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        info: state.ru.info
+        info: state[state.lang].info,
     };
 }
 

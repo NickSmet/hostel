@@ -18,7 +18,7 @@ class Gallery extends React.Component {
         return(
             <div className='gallery'>
                 <h1>
-                    ГАЛЕРЕЯ
+                    { this.props.title }
                 </h1>
                 <GalleryCategories />
                 <GalleryMain />
@@ -38,7 +38,8 @@ class Gallery extends React.Component {
 const mapStateToProps = state => {
     return {
         activeCat: state.ui.mainGallery.cat,
-        imgToShow: state.ui.mainGallery.open
+        imgToShow: state.ui.mainGallery.open,
+        title: state[state.lang].interface.gallery.title
     }
 }
 

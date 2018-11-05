@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
 import './../shared/form.css';
 import Button from './../shared/btn';
@@ -52,87 +53,124 @@ class GroupForm extends React.Component {
     }
 
     render() {
+        const lang = this.props.lang;
         return (
             <div className='form'>
                 <label>
-                    Место размещения
+                    { lang.place.label }
                     <select data-field='place' name="place" id="place" 
                         onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     >
-                        <option value="Гостиница">Гостиница</option>
-                        <option value="Хостел">Хостел</option>
+                        <option value={ lang.place.hotel }>{ lang.place.hotel }</option>
+                        <option value={ lang.place.hostel }>{ lang.place.hostel }</option>
                     </select>
                 </label>
                 <label>
-                    Дата заезда
+                    { lang.dateStart }
                     <input data-field='dateSt'  type="date" onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) } />
                 </label>
                 <label>
-                    Дата выезда
+                    { lang.dateEnd }
                     <input data-field='dateEnd' type="date" onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }/>
                 </label>
                 <label>
-                    Организация или ФИО заказчика *
+                    { lang.name } *
                     <textarea data-field='name' name="consumer" id="consumer" cols="30" rows="5"
                     onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     ></textarea></label>
                 <label>
-                    Цель поездки
+                    { lang.purp.title }
                     <select data-field='purp' name="purpose" id="purpose"
                     onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     >
-                        <option value="Туризм">Туризм</option>
-                        <option value="Бизнес">Бизнес</option>
-                        <option value="Обучение">Обучение</option>
-                        <option value="Спорт">Спорт</option>
-                        <option value="Иное">Иное</option>
+                        {
+                            lang.purp.options.map((item, i) => {
+                                return (
+                                    <option key={ i } value={ item }>
+                                        { item }
+                                    </option>
+                                )
+                            })
+                        }
                     </select></label>
                 <label>
-                    Количество человек в группе
+                    { lang.people }
                     <input data-field='people' type="text" onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     />
                 </label>
                 <label>
-                    Возраст участников
+                    { lang.age.title }
                     <select data-field='age' name="age" id="age"
                         onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     >
-                        <option value="До 18">До 18</option>
-                        <option value="18-25">18-25</option>
-                        <option value="Старше 25 лет">Старше 25 лет</option>
+                        {
+                            lang.age.options.map((item, i) => {
+                                return (
+                                    <option key={ i } value={ item }>
+                                        { item }
+                                    </option>
+                                )
+                            })
+                        }
                     </select>
                 </label>
                 <label>
-                    Иные требования и пожелания
+                    { lang.other }
                     <textarea data-field='msg'  name="wishes" id="wishes" cols="30" rows="5"
                         onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     ></textarea>
                 </label>
                 <label>
-                    Электронная почта для связи *
+                    { lang.email } *
                     <input data-field='email' type="text" 
                         onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     />
                 </label>
                 <label>
-                    Телефон для связи
+                    { lang.phone }
                     <input data-field='phone' type="text" 
                         onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                     />
                 </label>
                 <div onClick={ () => this.handleSubmit() }>
-                  <Button additionalClass={'form-btn'} title='ЗАБРОНИРОВАТЬ' />  
+                  <Button additionalClass={'form-btn'} title={ this.props.book } />  
                 </div>
+                {
+                    this.props.language === 'ru' ?
+                    (
+                        <div>
+                            <Alert bsStyle="danger" className={ this.state.showAlert ? 'form-alert active' : 'form-alert' }>
+                            Необходимо заполнить поля обозначенные "*"
+                            </Alert>
+                            <Alert bsStyle="success" className={ this.state.showOk ? 'form-alert active' : 'form-alert' }>
+                                Отправлено
+                            </Alert>
+                        </div>
+                    )
+                    :
+                    (
+                        <div>
+                            <Alert bsStyle="danger" className={ this.state.showAlert ? 'form-alert active' : 'form-alert' }>
+                                Please, fill the fields indicated by "*"
+                            </Alert>
+                            <Alert bsStyle="success" className={ this.state.showOk ? 'form-alert active' : 'form-alert' }>
+                                Success
+                            </Alert>
+                        </div>
+                    )
+                }
                 
-                <Alert bsStyle="danger" className={ this.state.showAlert ? 'form-alert active' : 'form-alert' }>
-                    Необходимо заполнить поля обозначенные "*"
-                </Alert>
-                <Alert bsStyle="success" className={ this.state.showOk ? 'form-alert active' : 'form-alert' }>
-                    Отправлено
-                </Alert>
             </div>
         );
     }
 }
 
-export default GroupForm;
+const mapStateToProps = state => {
+    return {
+        lang: state[state.lang].interface.forms,
+        language: state.lang,
+        book: state[state.lang].interface.book
+    }
+}
+
+export default connect(mapStateToProps)(GroupForm);

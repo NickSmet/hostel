@@ -14,16 +14,18 @@ class Group extends React.Component {
             email: 'groups@centeral.ru'
         };
 
+        const lang = this.props.lang;
+
         return (
             <div className='group'>
                 <div className='container'>
                     <div className='group-title'>
-                        <h1>Групповое бронирование</h1>
-                        <div>Форма заявки для группового бронирования</div>
+                        <h1>{ lang.title }</h1>
+                        <div>{ lang.text }</div>
                     </div>
                     <div className="group-wrapper">
                         <div className="group-left">
-                            <Info />
+                            <Info lang={ lang.info } />
                             <GroupContacts component='group' contacts={ contacts } />
                         </div>
                         <div className="group-right">
@@ -39,7 +41,8 @@ class Group extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        contacts: state.ru.contacts
+        contacts: state[state.lang].contacts,
+        lang: state[state.lang].interface.group
     }
 }
 

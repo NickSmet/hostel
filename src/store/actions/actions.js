@@ -12,6 +12,7 @@ export const GET_INFO = 'GET_INFO';
 export const GET_VISA = 'GET_VISA';
 export const GET_FAQ = 'GET_FAQ';
 export const GET_ROOMS = 'GET_ROOMS';
+export const SWITCH_LANG = 'SWITCH_LANG';
 
 export const saveContacts = (contacts) => {
     return {

@@ -1,7 +1,102 @@
 import * as types from '../actions/actions';
 
 const initialState = {
+    lang: 'ru',
     en: {
+        interface: {
+            menu: {
+                main: 'Homepage',
+                hotel: 'Hotel',
+                hostel: 'Hostel',
+                group: 'Book a Group',
+                visa: 'Visa Support',
+                transfer: 'Transfer',
+                contacts: 'Contacts'
+            },
+            map: 'Location',
+            gallery: {
+                title: 'Gallery',
+                all: 'All',
+                hostel: 'Hostel',
+                hotel: 'Hotel',
+                other: 'Other'
+            },
+            sale: 'Sales',
+            book: 'Book',
+            look: 'Details',
+            send: 'Send',
+            transfer: {
+                title: 'Transfer Application Form',
+                text: 'Please fill out this form and we will get in touch with you shortly.',
+            },
+            group: {
+                title: 'Group Booking',
+                text: 'Group Booking Application Form',
+                info: {
+                    title: 'Group Booking Application Form',
+                    textP1: `In order to request a group booking, please fill 
+                            out this form. We will get in touch with you withing a few hours.`,
+                    textP2: ''
+                }
+            },
+            forms: {
+                place: {
+                    label: 'Type of accommodation',
+                    hotel: 'Hotel',
+                    hostel: 'Hostel'
+                },
+                dateStart: 'Check-in date',
+                dateEnd: 'Check-out date',
+                time: 'Time',
+                name: 'Your individual or organization\'s name',
+                people: 'Number of guests',
+                comments: 'Additional requests',
+                email: 'Contact E-mail',
+                phone: 'Contact phone number',
+                address: 'Place of arrival',
+                feedbackForm: {
+                    title: 'Connection Form',
+                    name: 'Your name',
+                    email: 'Contact E-mail',
+                    message: 'Your message'
+                },
+                purp: {
+                    title: 'Purpose of the trip',
+                    options: [
+                        'Tourism', 'Business', 'Training', 'Sport', 'Other'
+                    ]
+                },
+                age: {
+                    title: 'Age group',
+                    options: [
+                        '18', '18-25', 'Over 25 years old'
+                    ]
+                },
+                other: 'Additional requests'
+            },
+            contacts: {
+                title: 'Contact information',
+                address: 'Address',
+                hostel: 'Hostel reception',
+                hotel: 'Hotel reception',
+                sale: 'Sales',
+                address: {
+                    title: 'Location'
+                },
+                airport: {
+                    svo: {
+                        title: 'ОТ АЭРОПОРТА "ШЕРЕМЕТЬЕВО"'
+                    },
+                    dme: {
+                        title: 'ОТ АЭРОПОРТА "ДОМОДЕДОВО"'
+                    },
+                    vko: {
+                        title: 'ОТ АЭРОПОРТА "ВНУКОВО"'
+                    },
+                }
+            }
+
+        },
         contacts: {},
         info:{
             title: '',
@@ -12,6 +107,104 @@ const initialState = {
         rooms: []
     },
     ru: {
+        interface: {
+            menu: {
+                main: 'Главная',
+                hotel: 'Отель',
+                hostel: 'Отель',
+                group: 'Групповое бронирование',
+                visa: 'Визовая поддержка',
+                transfer: 'Трансфер',
+                contacts: 'Контакты'
+            },
+            map: 'Схема проезда',
+            gallery: {
+                title: 'Галерея',
+                all: 'Все',
+                hostel: 'Номера хостела',
+                hotel: 'Номера отеля',
+                other: 'Разное'
+            },
+            sale: 'Отдел продаж',
+            book: 'Забронировать',
+            look: 'Смотреть',
+            send: 'Отправить',
+            transfer: {
+                title: 'Заказ трансфера',
+                text: 'Пожалуйста, заполните форму, и мы свяжемся с Вами в ближайшее время.',
+            },
+            group: {
+                title: 'ГРУППОВОЕ БРОНИРОВАНИЕ',
+                text: 'Форма заявки для группового бронирования',
+                info: {
+                    title: 'ФОРМА ГРУППОВОГО БРОНИРОВАНИЯ',
+                    textP1: `Для того что бы забронировать групповую заявку 
+                            вам необходимо заполнить данную форму и отправить ее нам.`,
+                    textP2: `Бронирование по запросу происходит на сайте компании, заявка 
+                            поступает в отдел бронирования и рассматривается в течении 5 часов. 
+                            Для бронирования необходимо заполнить форму с обязательным 
+                            указанием контактной информации. Менеджер отдела бронирования после 
+                            обработки заявки присылает подтверждение бронирования по электронной 
+                            почте или связывается по телефону.`
+                }
+            },
+            forms: {
+                place: {
+                    label: 'Место размещения',
+                    hotel: 'Гостиница',
+                    hostel: 'Хостел'
+                },
+                dateStart: 'Дата прибытия',
+                dateEnd: 'Дата выезда',
+                time: 'Время прибытия',
+                name: 'Организация или ФИО заказчика',
+                people: 'Количество человек',
+                comments: 'Комментарии',
+                email: 'Электронная почта для связи',
+                phone: 'Телефон для связи',
+                address: 'Место прибытия',
+                feedbackForm: {
+                    title: 'Форма связи',
+                    name: 'Ваше имя',
+                    email: 'Ваш Email',
+                    message: 'Ваше сообщение'
+                },
+                purp: {
+                    title: 'Цель поездки',
+                    options: [
+                        'Туризм', 'Бизнес', 'Обучение', 'Спорт', 'Иное'
+                    ]
+                },
+                age: {
+                    title: 'Возраст участников',
+                    options: [
+                        '18', '18-25', 'Старше 25 лет'
+                    ]
+                },
+                other: 'Иные требования и пожелания'
+            },
+            contacts: {
+                title: 'Контактные данные',
+                address: 'Адрес',
+                hostel: 'Ресепшн хостела',
+                hotel: 'Ресепшн гостиницы',
+                sale: 'Отдел продаж',
+                address: {
+                    title: 'Схема проезда'
+                },
+                airport: {
+                    svo: {
+                        title: 'ОТ АЭРОПОРТА "ШЕРЕМЕТЬЕВО"'
+                    },
+                    dme: {
+                        title: 'ОТ АЭРОПОРТА "ДОМОДЕДОВО"'
+                    },
+                    vko: {
+                        title: 'ОТ АЭРОПОРТА "ВНУКОВО"'
+                    },
+                }
+            }
+        },
         contacts: {},
         info:{
             title: '',
@@ -45,6 +238,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     let justClosed = false;
     switch (action.type) {
+        case types.SWITCH_LANG: 
+            return {
+                ...state,
+                lang: action.lang
+            }
         case types.GET_CONTACTS:
             return {
                 ...state,
@@ -143,11 +341,15 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 ru: {
                     ...state.ru,
-                    info: {...action.info}
+                    info: {...action.info},
                 },
                 en: {
                     ...state.en,
-                    info: {...action.info}
+                    info: {
+                        ...action.info,
+                        title: action.info.title_eng,
+                        text: action.info.text_eng
+                    }
                 }
             }
         case types.GET_VISA:

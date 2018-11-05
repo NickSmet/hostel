@@ -1,17 +1,17 @@
 import  React from 'react';
 
-const Contacts = ({ contacts }) => {
+const Contacts = ({ contacts, lang }) => {
     return (
         <div className='contacts-contacts'>
-            <h2>Контактные данные</h2>
-            <div><strong>Адрес: </strong>{ contacts.address }</div>
-            <div><strong>Ресепшн хостела: </strong>
+            <h2>{ lang.title }</h2>
+            <div><strong>{ lang.address.title }: </strong>{ contacts.address }</div>
+            <div><strong>{ lang.hostel }: </strong>
                 <a href={"tel:"+ contacts.phone}>{ contacts.phone }</a>
             </div>
-            <div><strong>Ресепшн гостиницы: </strong>
+            <div><strong>{ lang.hotel }: </strong>
                 <a href={"tel:"+ contacts.phone}>{ contacts.phone }</a>
             </div>
-            <div><strong>Отдел продаж: </strong>
+            <div><strong>{ lang.sale }: </strong>
                 <a href={"tel:"+ contacts.phone}>{ contacts.sales_phone }</a>
             </div>
             <div><strong>E-mail: </strong>

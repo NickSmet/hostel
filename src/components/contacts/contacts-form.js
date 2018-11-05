@@ -36,37 +36,56 @@ class ContactsForm extends React.Component {
     }
 
     render() {
+        const lang = this.props.lang.forms.feedbackForm;
         return (
             <div className='contacts-form-wrapper'>
-                <h2>Форма связи</h2>
+                <h2>{ lang.title }</h2>
                 <label>
-                    Ваше имя *
+                    { lang.name } *
                         <input data-field='name' type="text" 
                             onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                         />
                 </label>
                 <label>
-                    Ваш Email *
+                    { lang.email } *
                         <input data-field='email' type="text" 
                             onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                         />
                 </label>
                 <label>
-                    Ваше сообщение
+                    { lang.message }
                         <textarea data-field='msg' name="wishes" id="wishes" cols="30" rows="5"
                             onChange={ e => this.handleInput(e.target.dataset.field, e.target.value) }
                         ></textarea>
                 </label>
                 <div onClick={ () => this.handleSubmit() } >
-                    <Button additionalClass={'contacts-form'} title='ОТПРАВИТЬ' />
+                    <Button additionalClass={'contacts-form'} title={ this.props.lang.send } />
                 </div>
                 
-                <Alert bsStyle="danger" className={ this.state.showAlert ? 'form-alert active' : 'form-alert' }>
-                    Необходимо заполнить поля обозначенные "*"
-                </Alert>
-                <Alert bsStyle="success" className={ this.state.showOk ? 'form-alert active' : 'form-alert' }>
-                    Отправлено
-                </Alert>
+                {
+                        this.props.language === 'ru' ?
+                        (
+                            <div>
+                                <Alert bsStyle="danger" className={ this.state.showAlert ? 'form-alert active' : 'form-alert' }>
+                                Необходимо заполнить поля обозначенные "*"
+                                </Alert>
+                                <Alert bsStyle="success" className={ this.state.showOk ? 'form-alert active' : 'form-alert' }>
+                                    Отправлено
+                                </Alert>
+                            </div>
+                        )
+                        :
+                        (
+                            <div>
+                                <Alert bsStyle="danger" className={ this.state.showAlert ? 'form-alert active' : 'form-alert' }>
+                                    Please, fill the fields indicated by "*"
+                                </Alert>
+                                <Alert bsStyle="success" className={ this.state.showOk ? 'form-alert active' : 'form-alert' }>
+                                    Success
+                                </Alert>
+                            </div>
+                        )
+                    }
             </div>
         );
     }

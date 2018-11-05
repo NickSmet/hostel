@@ -23,7 +23,7 @@ class Footer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        contacts: state.ru.contacts
+        contacts: state[state.lang].contacts
     }
 }
 

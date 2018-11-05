@@ -110,12 +110,41 @@ div.col__header-book-btn {
     display: block;
     line-height: 86px;
     padding: 0 10px;
+    text-transform: uppercase;
     
 }
 
 .main-menu-items > li > a:hover {
     color: #232323;
     background-color: #fff;
+}
+
+.lang {
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1001;
+    top: 10px;
+    right: 50px;
+    font-size: 16px;
+}
+
+.lang span {
+    padding: 3px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang span.active {
+    color: #333;
+    background-color: #fff;
+}
+
+
+
+span.ru {
+    border-right: 0px solid #fff;
 }
 
 
@@ -142,7 +171,13 @@ div.col__header-book-btn {
         left: -65px;
         top: 70px; 
     }
+    .lang {
+
+        right: 10px;
+
+    }
 }
+
 
 .mobile-menu-container {
     padding: 0 15px;
@@ -153,6 +188,7 @@ div.col__header-book-btn {
 .side-menu-items {
     list-style: none;
     padding: 0;
+    text-transform: uppercase;
 }
 
 .side-menu-items-wrapper {

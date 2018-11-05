@@ -39,8 +39,13 @@ class Room extends React.Component {
                             <Slider imgs={ imgs } />
                             <div className='room-wubook'>
                                 <h3>{ room.name }</h3>
-                                <h4>От <span>{ room.price } ₽</span>/сутки</h4>
-                                <Book title='Забронировать' href={
+                                {
+                                    this.props.lang === 'ru' ?
+                                    <h4>От <span>{ room.price } ₽</span>/сутки</h4>
+                                    :
+                                    <h4>From <span>{ room.price } ₽</span>/night</h4>
+                                }
+                                <Book title={ this.props.book } href={
                 "https://wubook.net/wbkd/wbk/?lcode=1484303494&lang=ru&wbgoogle=1&open_on_tab=1&creferrer=http://centeral.ru/"
             }/>
                                 <div dangerouslySetInnerHTML={ this.iframeMarkup() }></div>
@@ -58,7 +63,9 @@ class Room extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        rooms: state.ru.rooms
+        rooms: state[state.lang].rooms,
+        book: state[state.lang].interface.book,
+        lang: state.lang
     }
 }
 

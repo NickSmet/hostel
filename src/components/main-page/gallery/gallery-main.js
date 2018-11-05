@@ -29,7 +29,7 @@ class GalleryMain extends React.Component {
                     <GalleryMainItem 
                         key={ item.id } 
                         path={ item.path.replace('..', 'http://dev.centeral.ru') } 
-                        title={ item.description } 
+                        title={ this.props.lang === 'en' ? item.description_eng : item.description } 
                         //path={ item.path } 
                     />
             );
@@ -47,6 +47,7 @@ class GalleryMain extends React.Component {
 
 const mapStateToProps = state => {
     return {
+        lang: state.lang,
         cat: state.ui.mainGallery.cat,
         imgs: state.ui.mainGallery.imgs
     }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Description = () => {
+const Description = ({ lang }) => {
     return (
         <div className='contacts-descr'>
-            <h2>Схема проезда</h2>
+            <h2>{ lang.map }</h2>
             <div>
                 <p>
                     <span>Наш точный адрес: </span>

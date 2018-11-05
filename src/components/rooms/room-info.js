@@ -2,6 +2,7 @@ import React from 'react';
 
 import Description from './room-info-descr';
 import Options from './room-options';
+import { connect } from 'react-redux';
 
 class RoomInfo extends React.Component {
 
@@ -22,21 +23,39 @@ class RoomInfo extends React.Component {
                         className={ this.state.activeTab === '1' ? "info-tab active" : "info-tab" }
                         onClick={ e => this.handleTabClick(e.target.dataset.key) }
                     >
-                        Описание
+                        {
+                            this.props.lang === 'ru' ?
+                            'Описание'
+                            :
+                            'Decription'
+                        }
+                        
                     </div>
                     <div 
                         data-key='2' 
                         className={ this.state.activeTab === '2' ? "info-tab active" : "info-tab" }
                         onClick={ e => this.handleTabClick(e.target.dataset.key) }
                     >
-                        Удобства
+                        {
+                            this.props.lang === 'ru' ?
+                            'Удобства'
+                            :
+                            'Facilities'
+                        }
+                       
                     </div>
                     <div 
                         data-key='3' 
                         className={ this.state.activeTab === '3' ? "info-tab active" : "info-tab" }
                         onClick={ e => this.handleTabClick(e.target.dataset.key) }
                     >
-                        Дополнительные услуги
+                        {
+                            this.props.lang === 'ru' ?
+                            'Дополнительные услуги'
+                            :
+                            'Additional services'
+                        }
+                        
                     </div>
 
                 </div>
@@ -60,6 +79,10 @@ class RoomInfo extends React.Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        lang: state.lang
+    }
+}
 
-
-export default RoomInfo;
+export default connect(mapStateToProps)(RoomInfo);
