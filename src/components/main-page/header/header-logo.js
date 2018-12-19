@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeaderLogo = (props) => {
     return (
-        <a href="/#/" className={props.isMobile ? 'header-logo header-logo_mobile' : 'header-logo'}>
-            <img src="http://dev.centeral.ru/img/logo.svg" alt="Centeral Hostel & Hotel"/>
-        </a>
+        <Link to="/" className={props.isMobile ? 'header-logo header-logo_mobile' : 'header-logo'}>
+            <img src="http://centeral.ru/img/logo.svg" alt="Centeral Hostel & Hotel"/>
+        </Link>
     );
 }
 

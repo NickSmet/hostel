@@ -2,8 +2,10 @@ import React from 'react';
 import './transfer.css';
 import TransferForm from './transfer-form';
 import { connect } from 'react-redux';
-
+import ReactGA from 'react-ga';
 const Transfer = ({ transfer }) => {
+    ReactGA.initialize('UA-131048082-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
         <div className='container'>
             <div className='transfer-title'>

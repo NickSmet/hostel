@@ -1,12 +1,19 @@
 import React from 'react';
 import './group.css';
 import { connect } from 'react-redux';
-
+import ReactGA from 'react-ga';
 import Info from './group-info';
 import GroupContacts from '../shared/contacts';
 import GroupForm from './group-form';
 
 class Group extends React.Component {
+
+    constructor() {
+        super();
+        ReactGA.initialize('UA-131048082-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
     render() {
 
         const contacts = {

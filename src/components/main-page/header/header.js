@@ -23,7 +23,7 @@ class Header extends Component {
                 <div className="header__top">
                     <Row className='header__top_row'>
                         <div className='container header__top_container'>
-                            <Col xsHidden={true} sm={12} md={12} lg={5} className='header-contacts-wrapper'>
+                            <Col xs={12} sm={12} md={12} lg={5} className='header-contacts-wrapper'>
                                 <HeaderContacts contacts={this.props.contacts} />
                             </Col>
                             <Col xs={12} sm={4} md={4} lg={2}>

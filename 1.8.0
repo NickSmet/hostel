@@ -1,0 +1,5 @@
++ jquery@3.3.1
++ ajv@6.0.0
+added 2 packages from 2 contributors, updated 1 package and audited 32095 packages in 39.363s
+found 8 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details

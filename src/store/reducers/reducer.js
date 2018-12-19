@@ -22,6 +22,7 @@ const initialState = {
                 other: 'Other'
             },
             sale: 'Sales',
+            phoneName: 'Reception',
             book: 'Book',
             look: 'Details',
             send: 'Send',
@@ -111,7 +112,7 @@ const initialState = {
             menu: {
                 main: 'Главная',
                 hotel: 'Отель',
-                hostel: 'Отель',
+                hostel: 'Хостел',
                 group: 'Групповое бронирование',
                 visa: 'Визовая поддержка',
                 transfer: 'Трансфер',
@@ -126,6 +127,7 @@ const initialState = {
                 other: 'Разное'
             },
             sale: 'Отдел продаж',
+            phoneName: 'Ресепшен',
             book: 'Забронировать',
             look: 'Смотреть',
             send: 'Отправить',

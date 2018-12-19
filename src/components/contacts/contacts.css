@@ -1,95 +1,94 @@
 .contacts {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .contacts h2 {
-    font-size: 28px;
-    font-weight: 700;
-    padding: 20px 0;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 20px 0;
 }
 
 .contacts h3 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .contacts p {
-    font-size: 21px;
+  font-size: 21px;
 }
 
 .contacts strong {
-    font-size: 21px;
-    font-weight: 700;
+  font-size: 21px;
+  font-weight: 700;
 }
 
 .contacts-contacts div {
-    font-size: 21px;
+  font-size: 21px;
 }
 
 .contacts-descr span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .contacts-contacts a {
-    color: #333;
+  color: #333;
 }
 
 .contacts-way-heading {
-    background-color: #fff;
-    padding: 20px 0;
-    transition: all 0.2s ease;
+  background-color: #fff;
+  padding: 20px 0;
+  transition: all 0.2s ease;
 }
 
 .contacts-way-heading a {
-    color: #333;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    font-size: 21px;
+  color: #333;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 21px;
 }
 
 .contacts-ways img {
-    width: 100%;
-} 
+  width: 100%;
+}
 
 .contacts-form-wrapper {
-    width: 33.333333%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    padding: 20px 0 110px 0;
+  width: 33.333333%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0 110px 0;
 }
 
 .contacts-form.main-btn {
-    width: 150px;
+  width: 150px;
 }
 
 .map {
-    width: 100%;
+  width: 100%;
 }
 
 .map img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 767px) {
-    .contacts {
-        padding: 0 15px 0 15px;
-    }
+  .contacts {
+    padding: 0 15px 0 15px;
+  }
 
-    .contacts-form-wrapper {
-        width: 100%;
-    }
+  .contacts-form-wrapper {
+    width: 100%;
+  }
 
-    .map img {
-        width: 100%;
-        height: 100vw;
-        object-fit: cover;
-    }
+  .map img {
+    width: 100%;
+    height: 100vw;
+    object-fit: cover;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-    .contacts strong {
-        display: block;
-        padding: 5px 0;
-    }
-
+  .contacts strong {
+    display: block;
+    padding: 5px 0;
+  }
 }

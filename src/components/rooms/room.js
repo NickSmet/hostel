@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import ReactGA from 'react-ga';
 import * as actions from './../../store/actions/actions'
 import Slider from './room-slider';
 import RoomInfo from './room-info';
@@ -8,6 +8,12 @@ import Book from './../shared/wubook-btn.js';
 
 
 class Room extends React.Component {
+
+    constructor() {
+        super();
+        ReactGA.initialize('UA-131048082-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
 
     componentDidMount() {
         this.props.loadData();

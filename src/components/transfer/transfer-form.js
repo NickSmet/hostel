@@ -35,7 +35,7 @@ class TransferForm extends React.Component {
                 this.setState({ showAlert: false })
             }, 3000);
         } else {
-            axios.post('http://dev.centeral.ru/php/sendMessageTransfer.php', {
+            axios.post('http://centeral.ru/php/sendMessageTransfer.php', {
                 place: this.state.place,
                 dateSt: this.state.dateSt,
                 time: this.state.time,

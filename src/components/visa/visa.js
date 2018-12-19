@@ -2,8 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './visa.css'
 import * as actions from './../../store/actions/actions';
-
+import ReactGA from 'react-ga';
 class Visa extends React.Component {
+
+    constructor() {
+        super();
+        ReactGA.initialize('UA-131048082-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
 
     componentDidMount() {
         this.props.loadVisa();

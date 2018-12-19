@@ -28,7 +28,7 @@ class GalleryMain extends React.Component {
             return (
                     <GalleryMainItem 
                         key={ item.id } 
-                        path={ item.path.replace('..', 'http://dev.centeral.ru') } 
+                        path={ item.path.replace('..', 'http://centeral.ru') } 
                         title={ this.props.lang === 'en' ? item.description_eng : item.description } 
                         //path={ item.path } 
                     />

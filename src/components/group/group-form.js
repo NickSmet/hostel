@@ -36,7 +36,7 @@ class GroupForm extends React.Component {
                 this.setState({ showAlert: false })
             }, 3000);
         } else {
-            axios.post('http://dev.centeral.ru/php/sendMessageGroup.php', {
+            axios.post('http://centeral.ru/php/sendMessageGroup.php', {
                 place: this.state.place,
                 dateSt: this.state.dateSt,
                 dateEnd: this.state.dateEnd,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import * as types from '../../../store/actions/actions';
 
@@ -10,25 +11,25 @@ class HeaderSideMenu extends React.Component {
             <div className={this.props.leftMenuIsOpen ? 'side-menu-items-wrapper show-side-menu' : 'side-menu-items-wrapper hide-side-menu'}>
                 <ul className='side-menu-items'>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/'>{ lang.main }</a>
+                        <Link to='/'>{ lang.main }</Link>
                     </li>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/hotel'>{ lang.hotel }</a>
+                        <Link to='/hotel'>{ lang.hotel }</Link>
                     </li>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/hostel'>{ lang.hostel }</a>
+                        <Link to='/hostel'>{ lang.hostel }</Link>
                     </li>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/groups'>{ lang.group }</a>
+                        <Link to='/groups'>{ lang.group }</Link>
                     </li>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/visa'>{ lang.visa }</a>
+                        <Link to='/visa'>{ lang.visa }</Link>
                     </li>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/transfer'>{ lang.transfer }</a>
+                        <Link to='/transfer'>{ lang.transfer }</Link>
                     </li>
                     <li onClick={ this.props.closeMenu }>
-                        <a href='/#/contacts'>{ lang.contacts }</a>
+                        <Link to='/contacts'>{ lang.contacts }</Link>
                     </li>
                 </ul>
             </div>

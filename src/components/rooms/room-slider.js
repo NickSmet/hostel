@@ -16,7 +16,7 @@ const Slider = ({ imgs }) => {
                     imgs.map((item, i) => {
                        return (
                            <div key={ i }>
-                               <img src={ item.path.replace('..', 'http://dev.centeral.ru') } alt='Изображение номера' />
+                               <img src={ item.path.replace('..', 'http://centeral.ru') } alt='Изображение номера' />
                            </div>
                        ) 
                     })

@@ -17,7 +17,7 @@ class Info extends React.Component {
             <div className='info'>
                 <div className='info-img-wrapper'>
                     <img
-                        src={this.props.info.image.replace('..', 'http://dev.centeral.ru')}
+                        src={this.props.info.image.replace('..', 'http://centeral.ru')}
                         alt="Изображение" />
                 </div>
                 

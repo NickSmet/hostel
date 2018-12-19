@@ -1,31 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 
 const HeaderMainMenuBtns = ({ lang }) => {
     return (
         <div>
             <ul className='main-menu-items'>
                 <li>
-                    <a href='/#/contacts'>{ lang.contacts }</a>
+                    <Link to='/contacts'>{ lang.contacts }</Link>
                 </li>
                 <li>
-                    <a href='/#/transfer'>{ lang.transfer }</a>
+                    <Link to='/transfer'>{ lang.transfer }</Link>
                 </li>
                 <li>
-                    <a href='/#/visa'>{ lang.visa }</a>
+                    <Link to='/visa'>{ lang.visa }</Link>
                 </li>
                 <li>
-                    <a href='/#/groups'>{ lang.group }</a>
+                    <Link to='/groups'>{ lang.group }</Link>
                 </li>
                 <li>
-                    <a href='/#/hostel'>{ lang.hostel }</a>
+                    <Link to='/hostel'>{ lang.hostel }</Link>
                 </li>
                 <li>
-                    <a href='/#/hotel'>{ lang.hotel }</a>
+                    <Link to='/hotel'>{ lang.hotel }</Link>
                 </li>
                 <li>
-                    <a href='/#/'>{ lang.main }</a>
+                    <Link to='/'>{ lang.main }</Link>
                 </li>
             </ul>
         </div>

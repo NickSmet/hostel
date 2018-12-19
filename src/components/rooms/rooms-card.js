@@ -1,26 +1,27 @@
 import React from 'react';
 import Button from './../shared/btn.js';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const RoomCard = ({ room, look, lang }) => {
     return (
         <div className='room'>
-            <a href={ window.location.hash + '/' + room.id }>
-                <img src={ room.main_image.replace('..', 'http://dev.centeral.ru') } alt={ room.name }/>
-            </a>
+            <Link to={ window.location.pathname + '/' + room.id }>
+                <img src={ room.main_image.replace('..', 'http://centeral.ru') } alt={ room.name }/>
+            </Link>
             <div className='room-plate'>
-                <a href={ window.location.hash + '/' + room.id }>
+                <Link to={ window.location.pathname + '/' + room.id }>
                     <div className='room-title'><span>{ room.name }</span></div>
-                </a>
+                </Link>
                 {
                     lang === 'ru' ?
                     <div className='room-price'>От { room.price } ₽ /сутки</div>
                     :
                     <div className='room-price'>From { room.price } ₽ /night</div>
                 }
-                <a href={ window.location.hash + '/' + room.id }>
+                <Link to={ window.location.pathname + '/' + room.id }>
                     <Button title={ look } additionalClass='room-btn' />
-                </a>
+                </Link>
             </div>
         </div>
     );
