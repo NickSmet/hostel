@@ -14,7 +14,7 @@ const Contacts = ({ contacts, lang }) => {
       </div>
       <div>
         <strong>{lang.hotel}: </strong>
-        <a href={'tel:' + contacts.phone}>{contacts.phone}</a>
+        <a href={'tel:' + contacts.hotel_phone}>{contacts.hotel_phone}</a>
       </div>
       <div>
         <strong>{lang.sale}: </strong>
