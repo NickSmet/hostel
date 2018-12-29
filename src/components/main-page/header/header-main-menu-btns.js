@@ -10,9 +10,6 @@ const HeaderMainMenuBtns = ({ lang }) => {
                     <Link to='/contacts'>{ lang.contacts }</Link>
                 </li>
                 <li>
-                    <Link to='/transfer'>{ lang.transfer }</Link>
-                </li>
-                <li>
                     <Link to='/visa'>{ lang.visa }</Link>
                 </li>
                 <li>
